@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Profile({fullName = 'Ezzine Smichi', handleName, image, profession = 'Web developer', bio}) {
 
-    handleName(fullName);
+    
 
     return (
         <div>
@@ -16,7 +16,9 @@ function Profile({fullName = 'Ezzine Smichi', handleName, image, profession = 'W
             color: 'rgb(40, 137, 194)'}}> { profession } </h2>
 
             <a href={bio} title='consult CV' style = {{color: 'rgb(49, 184, 184)',
-             textDecorationColor: 'rgb(232, 5, 240)'}}> My CV </a>
+             textDecorationColor: 'rgb(232, 5, 240)'}}> My CV </a><br/>
+
+            <button onClick = {()=>handleName(fullName)} style = {{backgroundColor : 'rgb(11, 8, 238)', color : '#fff', fontSize : '1.2rem', marginTop : '2rem'}}>show my name</button>
             
         </div>
     );
